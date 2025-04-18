@@ -1,0 +1,99 @@
+/* Grid za desktop i laptop prikaz glavne stranice */
+.parent-desktop, .parent-laptop {
+    display: none;
+    box-sizing: border-box;
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; 
+    align-items: center;
+    background: #fff; 
+    padding: 0 2rem;
+    min-height: 80px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.header-grid .div1 {
+    align-content:left; 
+    width: 80%;
+    height: auto;
+    opacity: 0.8;
+    display: block;
+    object-fit: cover;
+}
+.header-grid .div2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.header-grid .div3 {
+    width: 3rem;
+    height: auto;
+    display:flex;
+    object-position: center;
+    object-fit:contain;
+    padding-right: 0%;
+    z-index: 2;
+    gap: 1.rem;
+}
+
+@media (min-width: 1024px) {
+    .parent-desktop {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1.5fr  ;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        border: 1px solid black; 
+        padding: 10px; 
+        align-self: center; 
+    }
+
+    .parent-desktop > * {
+        border: 1px dashed gray; 
+        min-width: 50px; 
+        min-height: 50px; 
+        
+    }
+
+    .parent-desktop .div4 { grid-area: 1 / 1 / 2 / 2; 
+        align-content: center; padding-left: 20%; background-color: azure; line-height: 1.5; }
+    .parent-desktop .div5 { grid-area: 2 / 1 / 2 / 2; 
+        align-content: center;   padding-left: 20%; background-color: burlywood; height: 30%; line-height: 3; }
+   
+    .parent-desktop .div6 { grid-area: 1 / 2 / 2 / 6; height: 100%;
+        position: relative; overflow: hidden; align-items: center; }
+    .parent-desktop .div7 { grid-area: 1 / 2 / 2 / 2; 
+        z-index: 2; background-color: aliceblue; opacity: 0.9; padding-left: 25%; height: 25%;}
+    .parent-desktop .div8 { grid-area: 2 / 2 / 2 / 6; height: 100%;}
+}
+
+@media (max-width: 1023px) {
+    .parent-laptop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        align-self: center;
+        align-content: center;
+    }
+
+    .parent-laptop > * {
+        border: 1px dashed gray; 
+    }
+
+
+    .parent-laptop .div4 { grid-area: 1 / 1 / 2 / 4; 
+        overflow: hidden; position: relative; width: 100%; object-position: center bottom;}
+    .parent-laptop .div5 { grid-area: 1 / 1 / 2 / 2;
+        z-index: 2; height: 20%; background-color: aliceblue; opacity: 0.9; padding-left: 5%;}
+    .parent-laptop .div6 { grid-area: 2 / 1 / 4 / 2;
+        padding-left: 25%; background-color: azure; line-height: 2;}
+    .parent-laptop .div7 { grid-area: 4 / 1 / 5 / 2; 
+        align-content: center;   padding-left: 25%; background-color: burlywood; line-height: 2.7;}
+    .parent-laptop .div8 { grid-area: 2 / 2 / 5 / 4; }
+}
+

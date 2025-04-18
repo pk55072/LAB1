@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/cartGrid.css">
+</head>
+<body>
+    <header class="header-grid"> 
+        <div class="div1">
+          <img src="images/logotip.jpg" class="header-grid div1"> 
+             
+        </div>
+        <div class="div2">Košarica</div>
+        <div class="div3">
+          <a href="cart.html" target="_blank" title="Shopping Cart">
+            <!-- <img src="images/shopping-cart-icon.png" class="header-grid div3"> #zakomentirana linija iz opisa
+             nisam znao treba li košarica biti dostupna/clickable iz same stranice košarice, pošto mi nije imalo smisla da bude
+             zakomentirao sam-->
+            <!--<span id="cart-badge-header"></span> -->
+        </a>
+          <img src="images/search-icon.png" class="header-grid div3">        
+        </div>
+         </header>
+         <div class="cart-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>NAZIV PROIZVODA</th>
+                        <th>KOLIČINA</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                   
+                </tbody>
+            </table>
+          </div>
+          <script src="scripts/data.js"></script>     
+            <script src="scripts/cart.js"></script>        
+</body>
+</html>
