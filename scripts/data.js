@@ -261,6 +261,7 @@ function setCurrentCategory(categoryName) {
 function initializePage() { // Napravio sam ovakav reset da se košarica reseta svaki reload stranice
     if (performance.navigation.type === PerformanceNavigation.TYPE_RELOAD) {
         // Ne radi ništa - refresh
+        
     } else {
         localStorage.clear();
     }
