@@ -259,12 +259,7 @@ function setCurrentCategory(categoryName) {
 }
 
 function initializePage() { // Napravio sam ovakav reset da se košarica reseta svaki reload stranice
-    if (performance.navigation.type === PerformanceNavigation.TYPE_RELOAD) {
-        // Ne radi ništa - refresh
-        
-    } else {
-        localStorage.clear();
-    }
+    
    
     setCurrentCategory('Brazilsko voće');
     if (isLaptopView()) {
@@ -273,7 +268,11 @@ function initializePage() { // Napravio sam ovakav reset da se košarica reseta 
         renderDesktop();
     }
     updateCartBadges();
-    
+    if (performance.navigation.type === PerformanceNavigation.TYPE_RELOAD) {
+        
+    } else {
+        localStorage.clear();
+    }
 }
 
 function renderDesktop() {
